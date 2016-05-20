@@ -37,7 +37,7 @@ process.source = cms.Source("PoolSource",
   fileNames  = cms.untracked.vstring([
 #    '/store/mc/RunIISpring15MiniAODv2/TT_TuneCUETP8M1_13TeV-powheg-pythia8/MINIAODSIM/74X_mcRun2_asymptotic_v2-v1/40000/00087FEB-236E-E511-9ACB-003048FF86CA.root',
 #    '/store/data/Run2015C_25ns/SingleMuon/MINIAOD/16Dec2015-v1/00000/002C22D4-E1AF-E511-AE8E-001E673971CA.root',
-    '/store/mc/RunIIFall15MiniAODv2/LQLQToTopMu_M-1200_TuneCUETP8M1_13TeV_pythia8/MINIAODSIM/PU25nsData2015v1_76X_mcRun2_asymptotic_v12-v1/60000/2283B483-37B8-E511-A109-6CC2173D7CD0.root',
+    '/store/mc/RunIISpring16MiniAODv1/QCD_Pt-15to7000_TuneCUETHS1_Flat_13TeV_herwigpp/MINIAODSIM/PUSpring16_80X_mcRun2_asymptotic_2016_v3-v1/00000/0088DEBB-A90A-E611-9645-549F358EB73B.root',
   ]),
   skipEvents = cms.untracked.uint32(0)
 )
@@ -92,10 +92,10 @@ process.load('Configuration.StandardSequences.MagneticField_38T_cff')
 #see https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideFrontierConditions for latest global tags
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_condDBv2_cff')
 if useData:
-    process.GlobalTag.globaltag = '76X_dataRun2_v15' 
+    process.GlobalTag.globaltag = '80X_dataRun2_Prompt_v8' 
 else:
     if use25ns: 
-        process.GlobalTag.globaltag = '76X_mcRun2_asymptotic_v13' 
+        process.GlobalTag.globaltag = '80X_mcRun2_asymptotic_2016_miniAODv2' 
     else:
         process.GlobalTag.globaltag = '76X_mcRun2_startup_v12' 
 
