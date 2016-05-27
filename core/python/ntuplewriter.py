@@ -1,7 +1,8 @@
 import FWCore.ParameterSet.Config as cms
 
 
-useData = False
+#useData = False
+useData = True
 use25ns = True #switch this flag to False when running on 50ns samples
 
 # minimum pt for the large-R jets (applies for all: vanilla CA8/CA15, cmstoptag, heptoptag). Also applied for the corresponding genjets.
@@ -38,7 +39,8 @@ process.options = cms.untracked.PSet( wantSummary = cms.untracked.bool(True) , a
 process.source = cms.Source("PoolSource",
   fileNames  = cms.untracked.vstring([
            # '/store/mc/RunIISpring16MiniAODv1/TT_TuneCUETP8M1mpiOFF_13TeV-powheg-pythia8/MINIAODSIM/PUSpring16_80X_mcRun2_asymptotic_2016_v3-v1/00000/323B1524-8B09-E611-9D5D-00266CFCC9F8.root' #MC test file
-            '/store/mc/RunIISpring16MiniAODv1/QCD_Pt-15to7000_TuneCUETP8M1_Flat_13TeV_pythia8/MINIAODSIM/PUFlat0to50_magnetOn_80X_mcRun2_asymptotic_2016_v3-v1/20000/0059094A-B5F2-E511-AD70-008CFA166014.root'
+          #  '/store/mc/RunIISpring16MiniAODv1/QCD_Pt-15to7000_TuneCUETP8M1_Flat_13TeV_pythia8/MINIAODSIM/PUFlat0to50_magnetOn_80X_mcRun2_asymptotic_2016_v3-v1/20000/0059094A-B5F2-E511-AD70-008CFA166014.root'
+          '/store/data/Run2016B/JetHT/MINIAOD/PromptReco-v2/000/273/158/00000/1E4ABD0D-DA19-E611-9396-02163E014258.root'
            # 'file:/nfs/dust/cms/user/peiffer/98CCBD01-0517-E611-A464-02163E011F40.root', #Data test file
   ]),
   skipEvents = cms.untracked.uint32(0)
