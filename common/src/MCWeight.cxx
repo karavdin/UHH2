@@ -306,7 +306,6 @@ bool MCMuonScaleFactor::process(uhh2::Event & event) {
       weight      *= w;
       weight_up   *= w + err_tot;
       weight_down *= w - err_tot;
-      //      std::cout<<"weight = "<<weight<<" eta = "<<eta<<" pt = "<<pt<<std::endl;
     }
 
   }
@@ -349,9 +348,7 @@ MCMuonTrkScaleFactor::MCMuonTrkScaleFactor(uhh2::Context & ctx,
 
 
   std::ifstream in;
-  //std::cout<<sf_file_path.c_str()<<std::endl;
   in.open(sf_file_path.c_str());
-  //  std::cout<<"Muon TRK SF "<<std::endl;
   Int_t nlines = 0;
   double eta_min,eta_max,eta_ave,factor, err_dn, err_up;
   char tmp;
@@ -360,7 +357,6 @@ MCMuonTrkScaleFactor::MCMuonTrkScaleFactor(uhh2::Context & ctx,
   while (1) {
     in >> eta_min >> eta_ave >> eta_max >> factor >> err_dn >> err_up;
     if (!in.good()) break;
-    // std::cout<<" eta_min = "<<eta_min<<" factor = "<<factor<<" err_dn = "<<err_dn<<" err_up = "<<err_up<<std::endl;
     eta_.push_back(eta_max);
     SFs_.push_back(factor);
     SFs_err_dn_.push_back(err_dn);
@@ -406,7 +402,6 @@ bool MCMuonTrkScaleFactor::process(uhh2::Event & event) {
 	  float w = 0.01*SFs_[i];
 	  float err_dn =  0.01*SFs_err_dn_[i];
 	  float err_up =  0.01*SFs_err_up_[i];
-	  //	  std::cout<<" eta = "<<eta<<" SF = "<<w<<std::endl;
 	  weight      *= w;
 	  weight_up   *= w + fabs(err_up);
 	  weight_down *= w - fabs(err_dn);
@@ -621,7 +616,6 @@ bool MCElecScaleFactor2::process(uhh2::Event & event) {
       //take twice the uncertainty if the pT is outside the measured pT range
       if(out_of_range) err_tot*=2;
       float w_tot = (lumi1_*w+lumi2_*w2)/(lumi1_+lumi2_);//reweight weight according to lumi
-      //      std::cout<<"lumi1_ "<<lumi1_<<" lumi2_ "<<lumi2_<<" w = "<<w<<" w2 = "<<w2<<" w_tot = "<<w_tot<<std::endl;
       weight      *= w_tot;
       weight_up   *= w_tot + err_tot;
       weight_down *= w_tot - err_tot;
@@ -740,6 +734,7 @@ bool MCBTagScaleFactor::process(Event & event) {
   float weight_bc_down   = weight - weightErrBC;
   float weight_udsg_up   = weight + weightErrUDSG;
   float weight_udsg_down = weight - weightErrUDSG;
+  //  std::cout<<"weightErr = "<<weightErr<<" weightErrBC = "<<weightErrBC<<" weightErrUDSG = "<<weightErrUDSG<<std::endl;
 
   event.set(h_btag_weight_,           weight);
   event.set(h_btag_weight_up_,        weight_up);
@@ -795,6 +790,7 @@ std::tuple<float, float, float> MCBTagScaleFactor::get_weight_btag(const vector<
     }else{
       ///here one need to provide the pt/eta dependent efficiency for b-tag for "light jet"
       eff_hist = eff_udsg_.get();
+      //      eff_hist->Print();//TEST
     }
     const auto eff_pt_axis = eff_hist->GetXaxis();
     float pt_low_edge = eff_pt_axis->GetBinLowEdge(eff_pt_axis->GetFirst());
@@ -877,17 +873,14 @@ std::pair<float, float> MCBTagScaleFactor::get_SF_btag(float pt, float abs_eta, 
   }
 
   if (SF < 1e-10) {
-    // cout << "WARNING: SF vanishes! Will return SF = 1., SFerr = 0., Values: "
-    //      << "(SF, SFerr, is_out_of_bounds, lowbound, highbound, pt, pt_for_eval, btagentry_flav): "
-    //      << SF << ", " << SFerr << ", " << is_out_of_bounds << ", "
-    //      << sf_bounds.first << ", " << sf_bounds.second << ", "
-    //      << pt << ", " << pt_for_eval << ", " << btagentry_flav << endl;
+    cout << "WARNING: SF vanishes! Will return SF = 1., SFerr = 0., Values: "
+         << "(SF, SFerr, is_out_of_bounds, lowbound, highbound, pt, pt_for_eval, btagentry_flav): "
+         << SF << ", " << SFerr << ", " << is_out_of_bounds << ", "
+         << sf_bounds.first << ", " << sf_bounds.second << ", "
+         << pt << ", " << pt_for_eval << ", " << btagentry_flav << endl;
     SF = 1.;
     SFerr = 0.;
   }
-  // else{
-  //   cout<<"TEST b-tag SF = "<<SF<<endl;
-  // }
   return std::make_pair(SF, SFerr);
 }
 
