@@ -270,7 +270,7 @@ float FactorizedJetCorrectorCalculator::getCorrection(FactorizedJetCorrectorCalc
 //------------------------------------------------------------------------
 //--- Returns the vector of subcorrections, up to a given level ----------
 //------------------------------------------------------------------------
-std::vector<float> FactorizedJetCorrectorCalculator::getSubCorrections( FactorizedJetCorrectorCalculator::VariableValues& iValues) const
+std::vector<float> FactorizedJetCorrectorCalculator::getSubCorrections(FactorizedJetCorrectorCalculator::VariableValues& iValues) const
 {
   float scale,factor;
   std::vector<float> factors;
@@ -282,6 +282,7 @@ std::vector<float> FactorizedJetCorrectorCalculator::getSubCorrections( Factoriz
     //if (mLevels[i]==kL2 || mLevels[i]==kL6)
       //mCorrectors[i]->setInterpolation(true);
     scale = mCorrectors[i]->correction(vx,vy);
+
     //----- For JPT jets, the offset is stored in order to be used later by the the L1JPTOffset
     if ((mLevels[i]==kL1 || mLevels[i]==kL1fj) && iValues.mIsJPTrawP4set && !iValues.mIsJPTrawOFFset) {
       iValues.setJPTrawOff(scale);

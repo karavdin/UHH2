@@ -325,7 +325,7 @@ bool MCMuonScaleFactor::process(uhh2::Event & event) {
   } else {
     event.weight *= weight;
   }
-
+  //std::cout<<"h_muon_weight = "<<weight<<" up = "<<weight_up<<" down = "<<weight_down<<std::endl;
   return true;
 }
 

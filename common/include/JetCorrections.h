@@ -175,6 +175,7 @@ private:
  * 
  * Please note that the JetLeptonCleaner does not sort the (re-)corrected jets by pt;
  * you might want to do that before running algorithms / plotting which assume that.
+ * 
  */
 class JetLeptonCleaner: public uhh2::AnalysisModule {
 public:

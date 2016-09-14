@@ -903,10 +903,24 @@ bool NtupleWriter::filter(edm::Event& iEvent, const edm::EventSetup& iSetup) {
          std::cout<< "WARNING: number of METs = " << pat_mets.size() <<", should be 1" << std::endl;
        }
        else{
-         pat::MET pat_met = pat_mets[0];
+	 pat::MET pat_met = pat_mets[0];
          met[j].set_pt(pat_met.pt());
          met[j].set_phi(pat_met.phi());
          met[j].set_mEtSig(pat_met.mEtSig());
+	 met[j].set_uncorr_pt(pat_met.uncorPt());
+	 met[j].set_uncorr_phi(pat_met.uncorPhi());
+         // met[j].set_corr_x(pat_met.corEx());
+	 // met[j].set_corr_y(pat_met.corEy());
+	 // met[j].set_corr_SumEt(pat_met.corSumEt());
+
+	 std::cout<<"MET uncorrPt = "<<pat_met.uncorPt()<<" uncorrPhi = "<<pat_met.uncorPhi()<<" corrPt = "<<pat_met.pt()<<" corrPhi = "<<pat_met.phi()<<std::endl;
+	 //	 std::cout<<"MET uncorrPx = "<<pat_met.uncorPx()<<" uncorrPy = "<<pat_met.uncorPy()<<" corrPx = "<<pat_met.px()<<" corrPy = "<<pat_met.py()<<std::endl;
+	 std::cout<<"Type01 pat_met.corPt  = "<<pat_met.corPt(pat::MET::METCorrectionLevel::Type01)<<" pat_met.corPhi = "<<pat_met.corPhi(pat::MET::METCorrectionLevel::Type01)<<std::endl;
+	 //	 std::cout<<"Type01 pat_met.corPx  = "<<pat_met.corPx(pat::MET::METCorrectionLevel::Type01)<<" pat_met.corPy = "<<pat_met.corPy(pat::MET::METCorrectionLevel::Type01)<<std::endl;
+	 std::cout<<"Type1 pat_met.corPt  = "<<pat_met.corPt(pat::MET::METCorrectionLevel::Type1)<<" pat_met.corPhi = "<<pat_met.corPhi(pat::MET::METCorrectionLevel::Type1)<<std::endl;
+	 // std::cout<<"Type1 pat_met.corPx  = "<<pat_met.corPx(pat::MET::METCorrectionLevel::Type1)<<" pat_met.corPy = "<<pat_met.corPy(pat::MET::METCorrectionLevel::Type1)<<std::endl;
+	 std::cout<<"Type1Smear pat_met.corPt  = "<<pat_met.corPt(pat::MET::METCorrectionLevel::Type1Smear)<<" pat_met.corPhi = "<<pat_met.corPhi(pat::MET::METCorrectionLevel::Type1Smear)<<std::endl;
+	 std::cout<<"Type01Smear pat_met.corPt  = "<<pat_met.corPt(pat::MET::METCorrectionLevel::Type01Smear)<<" pat_met.corPhi = "<<pat_met.corPhi(pat::MET::METCorrectionLevel::Type01Smear)<<std::endl;
          if(!puppi.at(j))
             {
                met[j].set_shiftedPx_JetEnUp(pat_met.shiftedPx(pat::MET::METUncertainty::JetEnUp, pat::MET::METCorrectionLevel::Type1));
