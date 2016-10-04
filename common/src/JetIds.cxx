@@ -26,6 +26,30 @@ bool CSVBTag::operator()(const Jet & jet, const Event &) const{
     return jet.btag_combinedSecondaryVertex() > csv_threshold;
 }
 
+MVABTag::MVABTag(wp working_point) {
+    switch(working_point){
+        case WP_LOOSE:
+            mva_threshold = -0.715f;
+            break;
+        case WP_MEDIUM:
+            mva_threshold = 0.185f;
+            break;
+        case WP_TIGHT:
+            mva_threshold = 0.875f;
+            break;
+        default:
+            throw invalid_argument("invalid working point passed to MVABTag");
+    }
+}
+
+MVABTag::MVABTag(float float_point):mva_threshold(float_point) {}
+
+
+bool MVABTag::operator()(const Jet & jet, const Event &) const{
+    return jet.btag_combinedSecondaryVertexMVA() > mva_threshold;
+}
+
+
 JetPFID::JetPFID(wp working_point):m_working_point(working_point){}
 
 bool JetPFID::operator()(const Jet & jet, const Event &) const{
@@ -37,7 +61,7 @@ bool JetPFID::operator()(const Jet & jet, const Event &) const{
   case  WP_TIGHT_LEPVETO:
     return tightLepVetoID(jet);
   default:
-    throw invalid_argument("invalid working point passed to CSVBTag");
+    throw invalid_argument("invalid working point passed to JetPFID");
   }
   return false;
 }

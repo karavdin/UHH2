@@ -40,14 +40,17 @@ process.options = cms.untracked.PSet( wantSummary = cms.untracked.bool(False) , 
 process.source = cms.Source("PoolSource",
   fileNames  = cms.untracked.vstring([
             #'/store/mc/RunIISpring16MiniAODv1/TT_TuneCUETP8M1mpiOFF_13TeV-powheg-pythia8/MINIAODSIM/PUSpring16_80X_mcRun2_asymptotic_2016_v3-v1/00000/323B1524-8B09-E611-9D5D-00266CFCC9F8.root' #MC test file
-            '/store/data/Run2016B/JetHT/MINIAOD/PromptReco-v2/000/273/503/00000/069FE912-3E1F-E611-8EE4-02163E011DF3.root'
+          #  '/store/data/Run2016B/JetHT/MINIAOD/PromptReco-v2/000/273/503/00000/069FE912-3E1F-E611-8EE4-02163E011DF3.root'
+          # '/store/relval/CMSSW_8_1_0_pre9/RelValQCD_FlatPt_15_3000HS_13/MINIAODSIM/PU25ns_81X_mcRun2_asymptotic_v2_hip1p2_mtoff-v1/10000/0A3DB3E3-2E51-E611-9C10-0025905A4964.root'
+           #'/store/data/Run2016E/JetHT/MINIAOD/PromptReco-v2/000/276/831/00000/068D527E-FD4C-E611-90AE-02163E0136C8.root'
+           '/store/data/Run2016B/JetHT/MINIAOD/PromptReco-v2/000/273/503/00000/069FE912-3E1F-E611-8EE4-02163E011DF3.root'
            # 'file:/nfs/dust/cms/user/peiffer/98CCBD01-0517-E611-A464-02163E011F40.root', #Data test file
   ]),
   skipEvents = cms.untracked.uint32(0)
 )
 
 #process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(2))
-process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(100))
+#process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(100))
 #process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(10000))
 
 # Grid-control changes:

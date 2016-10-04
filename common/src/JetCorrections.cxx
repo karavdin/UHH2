@@ -227,25 +227,26 @@ const std::vector<std::string> JERFiles::Spring16_25ns_L23_AK8PFchs_MC = {
   "JetMETObjects/data/Spring16_25nsV6_MC_L3Absolute_AK8PFchs.txt"
 };
 
-const std::vector<std::string> JERFiles::Spring16_25ns_L123_AK4PFPuppi_MC = {
-  "JetMETObjects/data/Spring16_25nsV6_MC_L1FastJet_AK4PFPuppi.txt",
-  "JetMETObjects/data/Spring16_25nsV6_MC_L2Relative_AK4PFPuppi.txt",
-  "JetMETObjects/data/Spring16_25nsV6_MC_L3Absolute_AK4PFPuppi.txt"
-};
+// const std::vector<std::string> JERFiles::Spring16_25ns_L123_AK4PFPuppi_MC = {
+//   "JetMETObjects/data/Spring16_25nsV6_MC_L1FastJet_AK4PFPuppi.txt",
+//   "JetMETObjects/data/Spring16_25nsV6_MC_L2Relative_AK4PFPuppi.txt",
+//   "JetMETObjects/data/Spring16_25nsV6_MC_L3Absolute_AK4PFPuppi.txt"
+// };
+
 const std::vector<std::string> JERFiles::Spring16_25ns_L23_AK4PFPuppi_MC = {
   "JetMETObjects/data/Spring16_25nsV6_MC_L2Relative_AK4PFPuppi.txt",
   "JetMETObjects/data/Spring16_25nsV6_MC_L3Absolute_AK4PFPuppi.txt"
 };
 
 //TEST MET Collections
-/*const std::vector<std::string> JERFiles::Spring16_25ns_L123_AK4PFPuppi_MC = {
-  "JetMETObjects/data/Spring16_25nsV6_DATA_L2L3Residual_AK4PF_MISCORR.txt"
-  };*/
+// const std::vector<std::string> JERFiles::Spring16_25ns_L123_AK4PFPuppi_MC = {
+//   "JetMETObjects/data/Spring16_25nsV6_DATA_L2L3Residual_AK4PF_MISCORR.txt"
+//   };
 
-/* const std::vector<std::string> JERFiles::Spring16_25ns_L123_AK4PFPuppi_MC = {
+const std::vector<std::string> JERFiles::Spring16_25ns_L123_AK4PFPuppi_MC = {
   "JetMETObjects/data/Spring16_25nsV6_DATA_L2L3Residual_AK4PF_MISCORR.txt",
   "JetMETObjects/data/Spring16_25nsV6_DATA_L2L3Residual_AK4PF_MISCORR2.txt"
-  }; */
+  };
 
 const std::vector<std::string> JERFiles::Spring16_25ns_L123_AK8PFPuppi_MC = {
   "JetMETObjects/data/Spring16_25nsV6_MC_L1FastJet_AK8PFPuppi.txt",
