@@ -20,10 +20,30 @@ public:
     
     explicit CSVBTag(wp working_point);
     explicit CSVBTag(float float_point);
-
+    explicit CSVBTag(){};
     bool operator()(const Jet & jet, const uhh2::Event & event) const;
 private:
     float csv_threshold;
+};
+
+/** \brief The CombinedMVAV2BJetTags b-tag as jet id
+ * 
+ * Cuts on uhh2::Jet::btag_combinedSecondaryVertexMVA, which (in CMSSW) is called "CombinedMVAV2BJetTags"
+ * (see core/plugins/NtupleWriterJets.cxx), also known as "CombinedMVA v2".
+ * 
+ * Uses the preliminary thresholds for that tagger recommended here:
+ *  https://twiki.cern.ch/twiki/bin/view/CMS/BtagRecommendation80X#Boosted_event_topologies
+ */
+class MVABTag {
+public:
+    enum wp {WP_LOOSE, WP_MEDIUM, WP_TIGHT };
+    
+    explicit MVABTag(wp working_point);
+    explicit MVABTag(float float_point);
+    explicit MVABTag(){};
+    bool operator()(const Jet & jet, const uhh2::Event & event) const;
+private:
+    float mva_threshold;
 };
 
 /**

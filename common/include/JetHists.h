@@ -126,13 +126,17 @@ public:
                         const std::string & dirname,
                         const CSVBTag::wp & working_point,
                         const std::string & jets_handle_name="jets");
-
+  BTagMCEfficiencyHists(uhh2::Context & ctx,
+                        const std::string & dirname,
+                        const MVABTag::wp & working_point,
+                        const std::string & jets_handle_name="jets");
   virtual void fill(const uhh2::Event & ev) override;
 
 protected:
   void do_fill(const std::vector<TopJet> & jets, const uhh2::Event & event);
-
+  bool isMVA_;
   const CSVBTag btag_;
+  const MVABTag btagmva_;
   TH2F * hist_b_passing_;
   TH2F * hist_b_total_;
   TH2F * hist_c_passing_;
