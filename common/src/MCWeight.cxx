@@ -692,6 +692,73 @@ MCBTagScaleFactor::MCBTagScaleFactor(uhh2::Context & ctx,
                 working_point == CSVBTag::WP_MEDIUM ? BTagEntry::OP_MEDIUM :
                     BTagEntry::OP_TIGHT);
 
+ 
+
+  calib_up_.reset(new BTagCalibrationReader(op, "up"));
+  calib_.reset(new BTagCalibrationReader(op, "central"));
+  calib_down_.reset(new BTagCalibrationReader(op, "down"));
+
+  calib_up_->load(calib_data, BTagEntry::FLAV_B, measType_bc);
+  calib_up_->load(calib_data, BTagEntry::FLAV_C, measType_bc);
+  calib_up_->load(calib_data, BTagEntry::FLAV_UDSG, measType_udsg);
+  calib_->load(calib_data, BTagEntry::FLAV_B, measType_bc);
+  calib_->load(calib_data, BTagEntry::FLAV_C, measType_bc);
+  calib_->load(calib_data, BTagEntry::FLAV_UDSG, measType_udsg);
+  calib_down_->load(calib_data, BTagEntry::FLAV_B, measType_bc);
+  calib_down_->load(calib_data, BTagEntry::FLAV_C, measType_bc);
+  calib_down_->load(calib_data, BTagEntry::FLAV_UDSG, measType_udsg);
+}
+
+MCBTagScaleFactor::MCBTagScaleFactor(uhh2::Context & ctx,
+                                     const MVABTag::wp & working_point,
+                                     const std::string & jets_handle_name,
+                                     const std::string & sysType,
+                                     const std::string & measType_bc,
+                                     const std::string & measType_udsg,
+                                     const std::string & xml_param_name,
+                                     const std::string & weights_name_postfix):
+  btagmva_(MVABTag(working_point)),
+  h_jets_(ctx.get_handle<std::vector<Jet>>(jets_handle_name)),
+  h_topjets_(ctx.get_handle<std::vector<TopJet>>(jets_handle_name)),
+  sysType_(sysType),
+  h_btag_weight_          (ctx.declare_event_output<float>("weight_btag"+weights_name_postfix)),
+  h_btag_weight_up_       (ctx.declare_event_output<float>("weight_btag_up"+weights_name_postfix)),
+  h_btag_weight_down_     (ctx.declare_event_output<float>("weight_btag_down"+weights_name_postfix)),
+  h_btag_weight_bc_up_    (ctx.declare_event_output<float>("weight_btag_bc_up"+weights_name_postfix)),
+  h_btag_weight_bc_down_  (ctx.declare_event_output<float>("weight_btag_bc_down"+weights_name_postfix)),
+  h_btag_weight_udsg_up_  (ctx.declare_event_output<float>("weight_btag_udsg_up"+weights_name_postfix)),
+  h_btag_weight_udsg_down_(ctx.declare_event_output<float>("weight_btag_udsg_down"+weights_name_postfix))
+{
+  auto dataset_type = ctx.get("dataset_type");
+  bool is_mc = dataset_type == "MC";
+  if (!is_mc) {
+    cout << "Warning: MCBTagScaleFactor will not have an effect on "
+         <<" this non-MC sample (dataset_type = '" + dataset_type + "')" << endl;
+    return;
+  }
+
+  TFile eff_file(ctx.get(xml_param_name).c_str());
+  if (eff_file.IsZombie()) {
+    cout << "Warning: MCBTagScaleFactor will not have an effect because the root-file "
+         << "with MC-efficiencies not found: " << ctx.get(xml_param_name) << endl;
+    eff_file.Close();
+    return;
+  }
+  eff_b_.reset((TH2*) eff_file.Get("BTagMCEffFlavBEff"));
+  eff_c_.reset((TH2*) eff_file.Get("BTagMCEffFlavCEff"));
+  eff_udsg_.reset((TH2*) eff_file.Get("BTagMCEffFlavUDSGEff"));
+  eff_b_->SetDirectory(0);
+  eff_c_->SetDirectory(0);
+  eff_udsg_->SetDirectory(0);
+  eff_file.Close();
+
+  // https://twiki.cern.ch/twiki/bin/viewauth/CMS/BTagCalibration
+
+  BTagCalibration calib_data("MVAv2", ctx.get("BTagCalibration"));//TEST MVA b-tag
+  auto op = working_point == MVABTag::WP_LOOSE ? BTagEntry::OP_LOOSE : (
+                working_point == MVABTag::WP_MEDIUM ? BTagEntry::OP_MEDIUM :
+                    BTagEntry::OP_TIGHT);
+
   calib_up_.reset(new BTagCalibrationReader(op, "up"));
   calib_.reset(new BTagCalibrationReader(op, "central"));
   calib_down_.reset(new BTagCalibrationReader(op, "down"));
