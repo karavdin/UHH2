@@ -509,7 +509,7 @@ bool MCElecScaleFactor::process(uhh2::Event & event) {
     }
 
   }
-
+  std::cout<<"ELEC weight = "<<weight<<std::endl;
   event.set(h_elec_weight_,       weight);
   event.set(h_elec_weight_up_,    weight_up);
   event.set(h_elec_weight_down_,  weight_down);
@@ -625,7 +625,6 @@ bool MCElecScaleFactor2::process(uhh2::Event & event) {
     }
 
   }
-
   event.set(h_elec_weight_,       weight);
   event.set(h_elec_weight_up_,    weight_up);
   event.set(h_elec_weight_down_,  weight_down);
