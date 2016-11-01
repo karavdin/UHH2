@@ -207,15 +207,6 @@ const std::vector<std::string> JERFiles::Spring16_25ns_L23_AK4PFchs_MC = {
 };  
 
 
-/* //TEST MET collections
-const std::vector<std::string> JERFiles::Spring16_25ns_L123_AK4PFchs_MC = {
-  "JetMETObjects/data/Spring16_25nsV6_DATA_L2L3Residual_AK4PF_MISCORR.txt",
-  "JetMETObjects/data/Spring16_25nsV6_DATA_L2L3Residual_AK4PF_MISCORR2.txt"
-  };
-*/
-
-
-
 const std::vector<std::string> JERFiles::Spring16_25ns_L123_AK8PFchs_MC = {
   "JetMETObjects/data/Spring16_25nsV6_MC_L1FastJet_AK8PFchs.txt",
   "JetMETObjects/data/Spring16_25nsV6_MC_L2Relative_AK8PFchs.txt",
@@ -237,15 +228,7 @@ const std::vector<std::string> JERFiles::Spring16_25ns_L23_AK4PFPuppi_MC = {
   "JetMETObjects/data/Spring16_25nsV6_MC_L3Absolute_AK4PFPuppi.txt"
 };
 
-//TEST MET Collections
-/*const std::vector<std::string> JERFiles::Spring16_25ns_L123_AK4PFPuppi_MC = {
-  "JetMETObjects/data/Spring16_25nsV6_DATA_L2L3Residual_AK4PF_MISCORR.txt"
-  };*/
 
-/* const std::vector<std::string> JERFiles::Spring16_25ns_L123_AK4PFPuppi_MC = {
-  "JetMETObjects/data/Spring16_25nsV6_DATA_L2L3Residual_AK4PF_MISCORR.txt",
-  "JetMETObjects/data/Spring16_25nsV6_DATA_L2L3Residual_AK4PF_MISCORR2.txt"
-  }; */
 
 const std::vector<std::string> JERFiles::Spring16_25ns_L123_AK8PFPuppi_MC = {
   "JetMETObjects/data/Spring16_25nsV6_MC_L1FastJet_AK8PFPuppi.txt",
@@ -328,6 +311,126 @@ const std::vector<std::string> JERFiles::Spring16_25ns_L123_AK8PFPuppi_DATA = {
   "JetMETObjects/data/Spring16_25nsV6_DATA_L2Relative_AK8PFPuppi.txt",
   "JetMETObjects/data/Spring16_25nsV6_DATA_L3Absolute_AK8PFPuppi.txt",
   "JetMETObjects/data/Spring16_25nsV6_DATA_L2L3Residual_AK8PFPuppi.txt",
+};
+
+
+//Spring16_25nsV7G
+const std::vector<std::string> JERFiles::Spring16_25nsV7G_L123_AK4PFchs_MC = {
+  "JetMETObjects/data/Spring16_25nsV7G_MC_L1FastJet_AK4PFchs.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_MC_L2Relative_AK4PFchs.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_MC_L3Absolute_AK4PFchs.txt"
+  };
+
+const std::vector<std::string> JERFiles::Spring16_25nsV7G_L23_AK4PFchs_MC = {                                                                       
+  "JetMETObjects/data/Spring16_25nsV7G_MC_L2Relative_AK4PFchs.txt",                                                                               
+  "JetMETObjects/data/Spring16_25nsV7G_MC_L3Absolute_AK4PFchs.txt"
+};  
+
+
+const std::vector<std::string> JERFiles::Spring16_25nsV7G_L123_AK8PFchs_MC = {
+  "JetMETObjects/data/Spring16_25nsV7G_MC_L1FastJet_AK8PFchs.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_MC_L2Relative_AK8PFchs.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_MC_L3Absolute_AK8PFchs.txt"
+};
+
+const std::vector<std::string> JERFiles::Spring16_25nsV7G_L23_AK8PFchs_MC = {
+  "JetMETObjects/data/Spring16_25nsV7G_MC_L2Relative_AK8PFchs.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_MC_L3Absolute_AK8PFchs.txt"
+};
+
+const std::vector<std::string> JERFiles::Spring16_25nsV7G_L123_AK4PFPuppi_MC = {
+  "JetMETObjects/data/Spring16_25nsV7G_MC_L1FastJet_AK4PFPuppi.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_MC_L2Relative_AK4PFPuppi.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_MC_L3Absolute_AK4PFPuppi.txt"
+};
+const std::vector<std::string> JERFiles::Spring16_25nsV7G_L23_AK4PFPuppi_MC = {
+  "JetMETObjects/data/Spring16_25nsV7G_MC_L2Relative_AK4PFPuppi.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_MC_L3Absolute_AK4PFPuppi.txt"
+};
+
+
+
+const std::vector<std::string> JERFiles::Spring16_25nsV7G_L123_AK8PFPuppi_MC = {
+  "JetMETObjects/data/Spring16_25nsV7G_MC_L1FastJet_AK8PFPuppi.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_MC_L2Relative_AK8PFPuppi.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_MC_L3Absolute_AK8PFPuppi.txt"
+};
+
+
+const std::vector<std::string> JERFiles::Spring16_25nsV7G_L123_noRes_AK4PFchs_DATA = {
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L1FastJet_AK4PFchs.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L2Relative_AK4PFchs.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L3Absolute_AK4PFchs.txt"
+};
+
+
+const std::vector<std::string> JERFiles::Spring16_25nsV7G_L123_AK4PFchs_DATA = {
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L1FastJet_AK4PFchs.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L2Relative_AK4PFchs.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L3Absolute_AK4PFchs.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L2L3Residual_AK4PFchs.txt",
+};
+
+const std::vector<std::string> JERFiles::Spring16_25nsV7G_L23_AK4PFchs_DATA = {
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L2Relative_AK4PFchs.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L3Absolute_AK4PFchs.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L2L3Residual_AK4PFchs.txt"                                                                            
+};     
+
+const std::vector<std::string> JERFiles::Spring16_25nsV7G_L123_AK8PFchs_DATA = {
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L1FastJet_AK8PFchs.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L2Relative_AK8PFchs.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L3Absolute_AK8PFchs.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L2L3Residual_AK8PFchs.txt",
+};
+
+const std::vector<std::string> JERFiles::Spring16_25nsV7G_L123_noRes_AK8PFchs_DATA = {
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L1FastJet_AK8PFchs.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L2Relative_AK8PFchs.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L3Absolute_AK8PFchs.txt",
+};
+
+const std::vector<std::string> JERFiles::Spring16_25nsV7G_L23_AK8PFchs_DATA = {
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L2Relative_AK8PFchs.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L3Absolute_AK8PFchs.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L2L3Residual_AK8PFchs.txt",
+};
+
+const std::vector<std::string> JERFiles::Spring16_25nsV7G_L123_AK4PFPuppi_DATA = {
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L1FastJet_AK4PFPuppi.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L2Relative_AK4PFPuppi.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L3Absolute_AK4PFPuppi.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L2L3Residual_AK4PFPuppi.txt",
+};
+
+const std::vector<std::string> JERFiles::Spring16_25nsV7G_L23_AK4PFPuppi_DATA = {
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L2Relative_AK4PFPuppi.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L3Absolute_AK4PFPuppi.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L2L3Residual_AK4PFPuppi.txt",
+};
+
+
+const std::vector<std::string> JERFiles::Spring16_25nsV7G_L23_noRes_AK4PFPuppi_DATA = {
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L2Relative_AK4PFPuppi.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L3Absolute_AK4PFPuppi.txt"
+};      
+
+const std::vector<std::string> JERFiles::Spring16_25nsV7G_L123_noRes_AK4PFPuppi_DATA = {
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L1FastJet_AK4PFPuppi.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L2Relative_AK4PFPuppi.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L3Absolute_AK4PFPuppi.txt"
+};
+
+const std::vector<std::string> JERFiles::Spring16_25nsV7G_L23_noRes_AK4PFchs_DATA = {                                                             
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L2Relative_AK4PFchs.txt", 
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L3Absolute_AK4PFchs.txt"
+};    
+
+const std::vector<std::string> JERFiles::Spring16_25nsV7G_L123_AK8PFPuppi_DATA = {
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L1FastJet_AK8PFPuppi.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L2Relative_AK8PFPuppi.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L3Absolute_AK8PFPuppi.txt",
+  "JetMETObjects/data/Spring16_25nsV7G_DATA_L2L3Residual_AK8PFPuppi.txt",
 };
 
 
@@ -471,7 +574,6 @@ bool JetCorrector::process(uhh2::Event & event){
       correct_jet(*corrector, jet, event, jec_uncertainty, direction);
     }
     if(propagate_to_met)
-
       correct_MET(event, used_ak4chs,-1);
 
     return true;

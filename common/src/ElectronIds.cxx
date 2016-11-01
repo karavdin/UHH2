@@ -134,6 +134,7 @@ bool Electron_NonTrigMVAID(const Electron& ele_, const uhh2::Event&, const std::
   int wp_idx(-1);
   if     (wp_ == "80p_sigeff") wp_idx = 0;
   else if(wp_ == "90p_sigeff") wp_idx = 1;
+  else if(wp_ == "100p_sigeff") wp_idx = 2;
   else throw std::runtime_error("Electron_NonTrigMVAID -- undefined working-point tag: "+wp_);
 
   const float MVA(ele_.mvaNonTrigV0());
@@ -146,6 +147,7 @@ bool ElectronID_MVAnotrig_PHYS14_tight(const Electron& ele, const uhh2::Event& e
 
 bool ElectronID_MVAnotrig_Spring15_25ns_loose(const Electron& ele, const uhh2::Event& evt){ return Electron_NonTrigMVAID(ele, evt, "Spring15", "90p_sigeff"); }
 bool ElectronID_MVAnotrig_Spring15_25ns_tight(const Electron& ele, const uhh2::Event& evt){ return Electron_NonTrigMVAID(ele, evt, "Spring15", "80p_sigeff"); }
+bool ElectronID_MVAnotrig_Spring15_25ns_veryloose(const Electron& ele, const uhh2::Event& evt){ return Electron_NonTrigMVAID(ele, evt, "Spring15", "100p_sigeff"); }
 ////
 
 bool ElectronID_HEEP_RunII_25ns(const Electron& ele, const uhh2::Event&){ return Electron_HEEP(ele, "RunII_25ns", "CMS_WorkPoint_NoIso"); }
@@ -181,7 +183,6 @@ bool Electron_HEEP(const Electron& ele_, const std::string& tuning_, const std::
 
   float HoverE_threshold(-1);
   if(ele_.energy()){
-
     HoverE_threshold  = ElectronID::HEEP_LUT.at(tuning_).at(eleSC_pos_).at("HoverE coef") .at(wp_idx_) * (1./ele_.energy());
     HoverE_threshold += ElectronID::HEEP_LUT.at(tuning_).at(eleSC_pos_).at("HoverE const").at(wp_idx_);
   }

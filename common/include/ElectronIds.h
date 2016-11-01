@@ -217,6 +217,7 @@ bool ElectronID_MVAnotrig_PHYS14_tight(const Electron&, const uhh2::Event&);
 // --- Non-Triggering MVA ID: Spring15
 bool ElectronID_MVAnotrig_Spring15_25ns_loose(const Electron&, const uhh2::Event&);
 bool ElectronID_MVAnotrig_Spring15_25ns_tight(const Electron&, const uhh2::Event&);
+bool ElectronID_MVAnotrig_Spring15_25ns_veryloose(const Electron&, const uhh2::Event&);
 
 namespace ElectronID {
 
@@ -236,15 +237,28 @@ namespace ElectronID {
     },
   /************/
 
-  /** Spring15 **/
+  /* /\** Spring15 **\/ */
+  /*   {"Spring15", { */
+  /*                        /\* 80% SE    , 90% SE    *\/ */
+  /*     {"low-pt_barrel1" , {  0.287435 , -0.083313 }}, */
+  /*     {"low-pt_barrel2" , {  0.221846 , -0.235222 }}, */
+  /*     {"low-pt_endcap"  , { -0.303263 , -0.67099  }}, */
+  /*     {"high-pt_barrel1", {  0.967083 ,  0.913286 }}, */
+  /*     {"high-pt_barrel2", {  0.929117 ,  0.805013 }}, */
+  /*     {"high-pt_endcap" , {  0.726311 ,  0.358969 }}, */
+
+  /*    }, */
+  /*   }, */
+  /* /\**************\/ */
+ /** Spring15 **/
     {"Spring15", {
-                         /* 80% SE    , 90% SE    */
-      {"low-pt_barrel1" , {  0.287435 , -0.083313 }},
-      {"low-pt_barrel2" , {  0.221846 , -0.235222 }},
-      {"low-pt_endcap"  , { -0.303263 , -0.67099  }},
-      {"high-pt_barrel1", {  0.967083 ,  0.913286 }},
-      {"high-pt_barrel2", {  0.929117 ,  0.805013 }},
-      {"high-pt_endcap" , {  0.726311 ,  0.358969 }},
+                         /* 80% SE    , 90% SE, 100% SE    */
+	{"low-pt_barrel1" , {  0.287435 , -0.083313, -1.1 }},
+	{"low-pt_barrel2" , {  0.221846 , -0.235222,-1.1 }},
+	{"low-pt_endcap"  , { -0.303263 , -0.67099,-1.1  }},
+	{"high-pt_barrel1", {  0.967083 ,  0.913286,-1.1 }},
+	{"high-pt_barrel2", {  0.929117 ,  0.805013,-1.1 }},
+	{"high-pt_endcap" , {  0.726311 ,  0.358969,-1.1 }},
 
      },
     },

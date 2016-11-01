@@ -1,8 +1,8 @@
 import FWCore.ParameterSet.Config as cms
 
 
-useData = False
-#useData = True
+#useData = False
+useData = True
 
 # minimum pt for the large-R jets (applies for all: vanilla CA8/CA15, cmstoptag, heptoptag). Also applied for the corresponding genjets.
 fatjet_ptmin = 150.0
@@ -40,7 +40,7 @@ process.source = cms.Source("PoolSource",
   fileNames  = cms.untracked.vstring([
            #'/store/mc/RunIISpring16MiniAODv2/TT_TuneCUETP8M1_13TeV-powheg-pythia8/MINIAODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14_ext3-v1/00000/0064B539-803A-E611-BDEA-002590D0B060.root' #MC test file
            #'/store/mc/RunIISpring16MiniAODv2/TT_TuneCUETP8M1_13TeV-powheg-pythia8/MINIAODSIM/PUSpring16_80X_mcRun2_asymptotic_2016_miniAODv2_v0_ext3-v2/70000/00287FF4-0E40-E611-8D06-00266CFE78EC.root'
-           '/store/data/Run2016B/JetHT/MINIAOD/PromptReco-v2/000/273/503/00000/069FE912-3E1F-E611-8EE4-02163E011DF3.root'
+           '/store/data/Run2016G/JetHT/MINIAOD/PromptReco-v1/000/278/820/00000/0257E53E-2264-E611-AB6A-02163E01381D.root'
   ]),
   skipEvents = cms.untracked.uint32(0)
 )
