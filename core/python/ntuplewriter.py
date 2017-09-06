@@ -57,12 +57,13 @@ if isDebug:
 
 process.source = cms.Source("PoolSource",
   fileNames  = cms.untracked.vstring([
-            '/store/data/Run2016B/SingleElectron/MINIAOD/03Feb2017_ver2-v2/110000/028CD245-EFEA-E611-8A2B-90B11C2801E1.root'
+          #  '/store/data/Run2016B/SingleElectron/MINIAOD/03Feb2017_ver2-v2/110000/028CD245-EFEA-E611-8A2B-90B11C2801E1.root'
+          '/store/data/Run2016B/JetHT/MINIAOD/18Apr2017_ver2-v1/00000/00022D62-0625-E711-9397-FA163E551C6A.root'
   ]),
   skipEvents = cms.untracked.uint32(0)
 )
-#process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(300))
-process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(1000))
+process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(100))
+#process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(1000))
 #process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(10000))
 #process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(50000))
 
