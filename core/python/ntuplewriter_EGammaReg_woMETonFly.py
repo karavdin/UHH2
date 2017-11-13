@@ -57,7 +57,8 @@ if isDebug:
     
 process.source = cms.Source("PoolSource", fileNames  = cms.untracked.vstring([
             #            '/store/data/Run2016B/SingleElectron/MINIAOD/03Feb2017_ver2-v2/110000/028CD245-EFEA-E611-8A2B-90B11C2801E1.root'
-            'file:/afs/cern.ch/user/k/kirschen/public/forJERC/PickedEvents_Met_Xcheck.root'
+#            'file:/afs/cern.ch/user/k/kirschen/public/forJERC/PickedEvents_Met_Xcheck.root'
+            'file:/afs/cern.ch/user/t/tberger/public/pickeventsEG_BCD.root'
             ]),
                             skipEvents = cms.untracked.uint32(0)
                             )

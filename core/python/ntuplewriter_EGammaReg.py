@@ -57,7 +57,8 @@ if isDebug:
 
 process.source = cms.Source("PoolSource",
   fileNames  = cms.untracked.vstring([
-            '/store/data/Run2016B/SingleElectron/MINIAOD/03Feb2017_ver2-v2/110000/028CD245-EFEA-E611-8A2B-90B11C2801E1.root'
+#            '/store/data/Run2016B/SingleElectron/MINIAOD/03Feb2017_ver2-v2/110000/028CD245-EFEA-E611-8A2B-90B11C2801E1.root'
+            '/store/data/Run2016H/JetHT/MINIAOD/03Feb2017_ver3-v1/100000/0002DAEF-97EA-E611-8DEC-001E67E69DEC.root '
   ]),
   skipEvents = cms.untracked.uint32(0)
 )
