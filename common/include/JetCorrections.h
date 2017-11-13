@@ -173,6 +173,57 @@ namespace JERFiles {
     extern const std::vector<std::string> Summer16_23Sep2016_V4_H_L1RC_AK4PFchs_DATA;
     extern const std::vector<std::string> Summer16_23Sep2016_V4_L1RC_AK4PFchs_MC; 
 
+}
+
+/// namespace to define some useful filename constants to be used for jet energy corrections
+namespace JERFiles {
+    //Summer16_03Feb2017_V3_noRes needed for L2Res people
+    extern const std::vector<std::string> Summer16_03Feb2017_V3_BCD_L123_noRes_AK4PFchsDATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V3_EF_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V3_G_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V3_H_L123_noRes_AK4PFchs_DATA;
+
+    //Summer16_03Feb2017_V3 --> Official JEC recommendation for Moriond17
+    extern const std::vector<std::string> Summer16_03Feb2017_V3_BCD_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V3_EF_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V3_G_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V3_H_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V3_BCD_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V3_EF_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V3_G_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V3_H_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V1_L123_AK4PFchs_MC;
+    extern const std::vector<std::string> Summer16_03Feb2017_V1_L123_AK8PFchs_MC;
+    extern const std::vector<std::string> Summer16_03Feb2017_V3_BCD_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V3_EF_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V3_G_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V3_H_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V1_L1RC_AK4PFchs_MC; 
+}
+
+/// namespace to define some useful filename constants to be used for jet energy corrections
+namespace JERFiles {
+    //Summer16_03Feb2017_V4_noRes needed for L2Res people
+    extern const std::vector<std::string> Summer16_03Feb2017_V4_BCD_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V4_EF_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V4_G_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V4_H_L123_noRes_AK4PFchs_DATA;
+
+    //Summer16_03Feb2017_V4 --> Official JEC recommendation for Moriond17
+    extern const std::vector<std::string> Summer16_03Feb2017_V4_BCD_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V4_EF_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V4_G_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V4_H_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V4_BCD_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V4_EF_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V4_G_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V4_H_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V4_BCD_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V4_EF_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V4_G_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V4_H_L1RC_AK4PFchs_DATA;
+ }
+
    //Summer16_23Sep2016_V4 --> PUPPI Jet Corrections
     extern const std::vector<std::string> Summer16_23Sep2016_V4_BCD_L123_AK4PFPuppi_DATA;
     extern const std::vector<std::string> Summer16_23Sep2016_V4_EF_L123_AK4PFPuppi_DATA;
@@ -185,8 +236,105 @@ namespace JERFiles {
     extern const std::vector<std::string> Summer16_23Sep2016_V4_L123_AK4PFPuppi_MC;
     extern const std::vector<std::string> Summer16_23Sep2016_V4_L123_AK8PFPuppi_MC;
 
-}
+/// namespace to define some useful filename constants to be used for jet energy corrections
+namespace JERFiles {
+    //Summer16_03Feb2017_V5_noRes needed for L2Res people
+    extern const std::vector<std::string> Summer16_03Feb2017_V5_BCD_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V5_EF_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V5_G_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V5_H_L123_noRes_AK4PFchs_DATA;
 
+    //Summer16_03Feb2017_V5 --> Official JEC recommendation for Moriond17
+    extern const std::vector<std::string> Summer16_03Feb2017_V5_BCD_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V5_EF_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V5_G_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V5_H_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V5_BCD_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V5_EF_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V5_G_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V5_H_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V5_BCD_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V5_EF_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V5_G_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V5_H_L1RC_AK4PFchs_DATA;
+ }
+
+/// namespace to define some useful filename constants to be used for jet energy corrections
+namespace JERFiles {
+    //Summer16_03Feb2017_V6_noRes needed for L2Res people
+    extern const std::vector<std::string> Summer16_03Feb2017_V6_BCD_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V6_EF_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V6_G_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V6_H_L123_noRes_AK4PFchs_DATA;
+
+    //Summer16_03Feb2017_V6 --> Official JEC recommendation for Moriond17
+    extern const std::vector<std::string> Summer16_03Feb2017_V6_BCD_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V6_EF_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V6_G_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V6_H_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V6_BCD_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V6_EF_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V6_G_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V6_H_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V6_L123_AK4PFchs_MC;
+    extern const std::vector<std::string> Summer16_03Feb2017_V6_L123_AK8PFchs_MC;
+    extern const std::vector<std::string> Summer16_03Feb2017_V6_BCD_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V6_EF_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V6_G_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V6_H_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V6_L1RC_AK4PFchs_MC;
+ }
+
+namespace JERFiles {
+    //Summer16_03Feb2017_V7_noRes needed for L2Res people
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_BCD_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_EF_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_G_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_H_L123_noRes_AK4PFchs_DATA;
+
+    //Summer16_03Feb2017_V7 --> Official JEC recommendation for Moriond17
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_BCD_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_EF_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_G_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_H_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_BCD_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_EF_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_G_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_H_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_L123_AK4PFchs_MC;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_L123_AK8PFchs_MC;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_BCD_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_EF_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_G_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_H_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_L1RC_AK4PFchs_MC;
+ }
+
+
+namespace JERFiles {
+    //Summer16_07Aug2017_V1_noRes needed for L2Res people
+    extern const std::vector<std::string> Summer16_07Aug2017_V1_BCD_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V1_EF_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V1_G_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V1_H_L123_noRes_AK4PFchs_DATA;
+
+    //Summer16_07Aug2017_V1 --> Official JEC recommendation for Legacy2016
+    extern const std::vector<std::string> Summer16_07Aug2017_V1_BCD_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V1_EF_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V1_G_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V1_H_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V1_BCD_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V1_EF_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V1_G_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V1_H_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V1_L123_AK4PFchs_MC;
+    extern const std::vector<std::string> Summer16_07Aug2017_V1_L123_AK8PFchs_MC;
+    extern const std::vector<std::string> Summer16_07Aug2017_V1_BCD_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V1_EF_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V1_G_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V1_H_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V1_L1RC_AK4PFchs_MC;
+ }
 /** \brief (Re-)Correct jets according to the corrections in the passed txt files
  * 
  * txt files are available in JetMETObjects/data/; see README there for instructions how to produce
@@ -396,6 +544,8 @@ namespace JERSmearing {
   typedef std::vector<std::array<float, 4> > SFtype1;
 
   extern const SFtype1 SF_13TeV_2016;
+  extern const SFtype1 SF_13TeV_2016_default;
+
   extern const SFtype1 SF_13TeV_2016_03Feb2017;
 
 }
@@ -420,7 +570,7 @@ namespace JERSmearing {
  */
 class JetResolutionSmearer: public uhh2::AnalysisModule {
 public:
-    explicit JetResolutionSmearer(uhh2::Context & ctx, const JERSmearing::SFtype1& JER_sf=JERSmearing::SF_13TeV_2016);
+    explicit JetResolutionSmearer(uhh2::Context & ctx, const JERSmearing::SFtype1& JER_sf=JERSmearing::SF_13TeV_2016_03Feb2017);
 
     virtual bool process(uhh2::Event & event) override;
 
