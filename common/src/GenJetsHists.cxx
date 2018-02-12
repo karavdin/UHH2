@@ -47,7 +47,8 @@ void GenJetsHists::fill(const uhh2::Event & event){
     cerr<<collection<<" is invalid. Going to abort from GenJetsHists class"<<endl;
     assert(1==0);
   }
-  vector<Particle> jets = collection.empty() ?  *event.genjets : event.get(h_jets);
+  //  vector<Particle> jets = collection.empty() ? *event.genjets : event.get(h_jets);
+  vector<FlavorParticle> jets = *event.genjets;
   number->Fill(jets.size(), w);
   for(unsigned int i = 0; i <jets.size(); i++){
     const auto & jet = jets[i];

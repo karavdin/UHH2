@@ -41,7 +41,7 @@ public:
   GenInfo* genInfo;
   std::vector< GenTopJet >* gentopjets;
   std::vector< GenParticle >* genparticles;
-  std::vector< Particle>* genjets;
+  std::vector< FlavorParticle>* genjets;
   std::vector< PFParticle>* pfparticles;
 
   /** \brief Access to trigger results.

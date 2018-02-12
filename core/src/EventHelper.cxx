@@ -52,7 +52,7 @@ IMPL_SETUP(met, MET)
 IMPL_SETUP(genInfo, GenInfo)
 IMPL_SETUP(gentopjets, vector<GenTopJet>)
 IMPL_SETUP(genparticles, vector<GenParticle>)
-IMPL_SETUP(genjets, vector<Particle>)
+IMPL_SETUP(genjets, vector<FlavorParticle>)
 IMPL_SETUP(genmet, MET)
 
 void EventHelper::setup_trigger(){

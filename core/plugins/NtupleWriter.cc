@@ -435,7 +435,7 @@ NtupleWriter::NtupleWriter(const edm::ParameterSet& iConfig): outfile(0), tr(0),
     genjets.resize(genjet_sources.size());
     for(size_t j=0; j< genjet_sources.size(); ++j){
         genjet_tokens.push_back(consumes<vector<reco::GenJet>>(genjet_sources[j]));
-        branch(tr, genjet_sources[j].c_str(), "std::vector<Particle>", &genjets[j]);
+        branch(tr, genjet_sources[j].c_str(), "std::vector<FlavorParticle>", &genjets[j]);
     }
     if(!genjet_sources.empty()){
         event->genjets = &genjets[0];
@@ -887,12 +887,13 @@ bool NtupleWriter::filter(edm::Event& iEvent, const edm::EventSetup& iSetup) {
          if(gen_jet.pt() < genjet_ptmin) continue;
          if(fabs(gen_jet.eta()) > genjet_etamax) continue;
 
-          Particle jet;
+          FlavorParticle jet;
           jet.set_charge(gen_jet.charge());
           jet.set_pt(gen_jet.pt());
           jet.set_eta(gen_jet.eta());
           jet.set_phi(gen_jet.phi());
           jet.set_energy(gen_jet.energy());
+          jet.set_flavor(-1); //ToDo: set flavor from miniAOD
 
           // recalculate the jet charge.
           int jet_charge = 0;
