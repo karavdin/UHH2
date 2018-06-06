@@ -28,9 +28,51 @@ namespace JERFiles {
     extern const std::vector<std::string> Summer16_03Feb2017_V3_EF_L1RC_AK4PFchs_DATA;
     extern const std::vector<std::string> Summer16_03Feb2017_V3_G_L1RC_AK4PFchs_DATA;
     extern const std::vector<std::string> Summer16_03Feb2017_V3_H_L1RC_AK4PFchs_DATA;
+
     extern const std::vector<std::string> Summer16_03Feb2017_V1_L123_AK4PFchs_MC;
     extern const std::vector<std::string> Summer16_03Feb2017_V1_L123_AK8PFchs_MC;
     extern const std::vector<std::string> Summer16_03Feb2017_V1_L1RC_AK4PFchs_MC; 
+
+
+    //Summer16_03Feb2017_V7_noRes needed for L2Res people
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_BCD_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_EF_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_G_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_H_L123_noRes_AK4PFchs_DATA;
+
+    //Summer16_03Feb2017_V7
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_BCD_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_EF_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_G_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_H_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_BCD_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_EF_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_G_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_H_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_BCD_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_EF_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_G_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V7_H_L1RC_AK4PFchs_DATA;
+
+//Summer16_03Feb2017_V9
+    extern const std::vector<std::string> Summer16_03Feb2017_V9_BCD_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V9_EF_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V9_G_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V9_H_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V9_BCD_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V9_EF_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V9_G_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V9_H_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V9_BCD_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V9_EF_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V9_G_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V9_H_L1RC_AK4PFchs_DATA;
+
+ //Summer16_03Feb2017_V9_noRes needed for L2Res people
+    extern const std::vector<std::string> Summer16_03Feb2017_V9_BCD_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V9_EF_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V9_G_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_03Feb2017_V9_H_L123_noRes_AK4PFchs_DATA;
 }
 
 /// namespace to define some useful filename constants to be used for jet energy corrections
@@ -147,6 +189,14 @@ namespace JERFiles {
     extern const std::vector<std::string> Summer16_03Feb2017_V7_L1RC_AK4PFchs_MC;
     extern const std::vector<std::string> Summer16_03Feb2017_V7_L1RC_AK8PFchs_MC; 
 
+    //Summer16_03Feb2017_V9
+    //    extern const std::vector<std::string> Summer16_03Feb2017_V9_L123_AK4PFpuppi_MC;
+    extern const std::vector<std::string> Summer16_03Feb2017_V9_L123_AK4PFchs_MC;
+    extern const std::vector<std::string> Summer16_03Feb2017_V9_L123_AK8PFchs_MC;
+    //    extern const std::vector<std::string> Summer16_03Feb2017_V9_L123_AK8PFpuppi_MC;
+    extern const std::vector<std::string> Summer16_03Feb2017_V9_L1RC_AK4PFchs_MC;
+    extern const std::vector<std::string> Summer16_03Feb2017_V9_L1RC_AK8PFchs_MC; 
+
  }
 
 namespace JERFiles {
@@ -188,28 +238,75 @@ namespace JERFiles {
 }
 
 namespace JERFiles {
-    //Summer16_07Aug2017_V1_noRes needed for L2Res people
-    extern const std::vector<std::string> Summer16_07Aug2017_V1_BCD_L123_noRes_AK4PFchs_DATA;
-    extern const std::vector<std::string> Summer16_07Aug2017_V1_EF_L123_noRes_AK4PFchs_DATA;
-    extern const std::vector<std::string> Summer16_07Aug2017_V1_G_L123_noRes_AK4PFchs_DATA;
-    extern const std::vector<std::string> Summer16_07Aug2017_V1_H_L123_noRes_AK4PFchs_DATA;
+    //Summer16_07Aug2017_V3_noRes needed for L2Res people
+    extern const std::vector<std::string> Summer16_07Aug2017_V3_BCD_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V3_EF_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V3_GH_L123_noRes_AK4PFchs_DATA;
+    //    extern const std::vector<std::string> Summer16_07Aug2017_V3_H_L123_noRes_AK4PFchs_DATA;
 
-    //Summer16_07Aug2017_V1 --> Temporary JEC for Legacy2016
-    extern const std::vector<std::string> Summer16_07Aug2017_V1_BCD_L123_AK4PFchs_DATA;
-    extern const std::vector<std::string> Summer16_07Aug2017_V1_EF_L123_AK4PFchs_DATA;
-    extern const std::vector<std::string> Summer16_07Aug2017_V1_G_L123_AK4PFchs_DATA;
-    extern const std::vector<std::string> Summer16_07Aug2017_V1_H_L123_AK4PFchs_DATA;
-    extern const std::vector<std::string> Summer16_07Aug2017_V1_BCD_L123_AK8PFchs_DATA;
-    extern const std::vector<std::string> Summer16_07Aug2017_V1_EF_L123_AK8PFchs_DATA;
-    extern const std::vector<std::string> Summer16_07Aug2017_V1_G_L123_AK8PFchs_DATA;
-    extern const std::vector<std::string> Summer16_07Aug2017_V1_H_L123_AK8PFchs_DATA;
-    extern const std::vector<std::string> Summer16_07Aug2017_V1_L123_AK4PFchs_MC;
-    extern const std::vector<std::string> Summer16_07Aug2017_V1_L123_AK8PFchs_MC;
-    extern const std::vector<std::string> Summer16_07Aug2017_V1_BCD_L1RC_AK4PFchs_DATA;
-    extern const std::vector<std::string> Summer16_07Aug2017_V1_EF_L1RC_AK4PFchs_DATA;
-    extern const std::vector<std::string> Summer16_07Aug2017_V1_G_L1RC_AK4PFchs_DATA;
-    extern const std::vector<std::string> Summer16_07Aug2017_V1_H_L1RC_AK4PFchs_DATA;
-    extern const std::vector<std::string> Summer16_07Aug2017_V1_L1RC_AK4PFchs_MC;
+    //Summer16_07Aug2017_V3 --> Temporary JEC for Legacy2016
+    extern const std::vector<std::string> Summer16_07Aug2017_V3_BCD_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V3_EF_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V3_GH_L123_AK4PFchs_DATA;
+    //    extern const std::vector<std::string> Summer16_07Aug2017_V3_H_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V3_BCD_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V3_EF_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V3_GH_L123_AK8PFchs_DATA;
+    //    extern const std::vector<std::string> Summer16_07Aug2017_V3_H_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V3_L123_AK4PFchs_MC;
+    extern const std::vector<std::string> Summer16_07Aug2017_V3_L123_AK8PFchs_MC;
+    extern const std::vector<std::string> Summer16_07Aug2017_V3_BCD_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V3_EF_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V3_GH_L1RC_AK4PFchs_DATA;
+    //    extern const std::vector<std::string> Summer16_07Aug2017_V3_H_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V3_L1RC_AK4PFchs_MC;
+
+ //Summer16_07Aug2017_V5_noRes needed for L2Res people
+    extern const std::vector<std::string> Summer16_07Aug2017_V5_BCD_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V5_EF_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V5_GH_L123_noRes_AK4PFchs_DATA;
+    //    extern const std::vector<std::string> Summer16_07Aug2017_V5_H_L123_noRes_AK4PFchs_DATA;
+
+    //Summer16_07Aug2017_V5 --> Temporary JEC for Legacy2016
+    extern const std::vector<std::string> Summer16_07Aug2017_V5_BCD_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V5_EF_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V5_GH_L123_AK4PFchs_DATA;
+    //    extern const std::vector<std::string> Summer16_07Aug2017_V5_H_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V5_BCD_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V5_EF_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V5_GH_L123_AK8PFchs_DATA;
+    //    extern const std::vector<std::string> Summer16_07Aug2017_V5_H_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V5_L123_AK4PFchs_MC;
+    extern const std::vector<std::string> Summer16_07Aug2017_V5_L123_AK8PFchs_MC;
+    extern const std::vector<std::string> Summer16_07Aug2017_V5_BCD_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V5_EF_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V5_GH_L1RC_AK4PFchs_DATA;
+    //    extern const std::vector<std::string> Summer16_07Aug2017_V5_H_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V5_L1RC_AK4PFchs_MC;
+
+//Summer16_07Aug2017_V6_noRes needed for L2Res people
+    extern const std::vector<std::string> Summer16_07Aug2017_V6_BCD_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V6_EF_L123_noRes_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V6_GH_L123_noRes_AK4PFchs_DATA;
+    //    extern const std::vector<std::string> Summer16_07Aug2017_V6_H_L123_noRes_AK4PFchs_DATA;
+
+    //Summer16_07Aug2017_V6 --> Temporary JEC for Legacy2016
+    extern const std::vector<std::string> Summer16_07Aug2017_V6_BCD_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V6_EF_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V6_GH_L123_AK4PFchs_DATA;
+    //    extern const std::vector<std::string> Summer16_07Aug2017_V6_H_L123_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V6_BCD_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V6_EF_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V6_GH_L123_AK8PFchs_DATA;
+    //    extern const std::vector<std::string> Summer16_07Aug2017_V6_H_L123_AK8PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V6_L123_AK4PFchs_MC;
+    extern const std::vector<std::string> Summer16_07Aug2017_V6_L123_AK8PFchs_MC;
+    extern const std::vector<std::string> Summer16_07Aug2017_V6_BCD_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V6_EF_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V6_GH_L1RC_AK4PFchs_DATA;
+    //    extern const std::vector<std::string> Summer16_07Aug2017_V6_H_L1RC_AK4PFchs_DATA;
+    extern const std::vector<std::string> Summer16_07Aug2017_V6_L1RC_AK4PFchs_MC;
+
  }
 
 /** \brief (Re-)Correct jets according to the corrections in the passed txt files
@@ -243,6 +340,7 @@ private:
     bool propagate_to_met = false;
     bool used_ak4puppi = false;
     bool used_ak4chs = false;
+    bool used_ak4chs_test = false;
     bool metprop_possible_ak8chs = false;
     bool metprop_possible_ak8puppi = false;
     bool used_slimmedmet = false;
@@ -422,6 +520,7 @@ namespace JERSmearing {
 
   extern const SFtype1 SF_13TeV_2016;
   extern const SFtype1 SF_13TeV_2016_03Feb2017;
+  extern const SFtype1 SF_13TeV_2016_default;
 
 }
 

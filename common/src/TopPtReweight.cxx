@@ -40,11 +40,11 @@ bool TopPtReweight::process(uhh2::Event& event){
   if (ttbargen.DecayChannel() != TTbarGen::e_notfound) {
     float tpt1 = ttbargen.Top().v4().Pt();
     float tpt2 = ttbargen.Antitop().v4().Pt();
-    tpt1 = std::min(tpt1, float(400.));
-    tpt2 = std::min(tpt2, float(400.));
+    // tpt1 = std::min(tpt1, float(400.)); //there are not high pt recommendation in current top pt reweighting procedure
+    // tpt2 = std::min(tpt2, float(400.)); //there are not high pt recommendation in current top pt reweighting procedure
     wgt = sqrt(exp(a_+b_*tpt1)*exp(a_+b_*tpt2));
   }
-
+  //  std::cout<<"wgt ="<<wgt<<std::endl;
   if(!weight_name_.empty())
     event.set(h_weight_, wgt);
   if (apply_weight_) {
