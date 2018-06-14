@@ -12,7 +12,7 @@
 #
 from DasQuery import autocomplete_Datasets
 
-inputDatasets = ['/JetHT/Run2017F-17Nov2017-v1/MINIAOD']
+inputDatasets = ['/JetHT/Run2017F-31Mar2018-v1/MINIAOD']
 inputDatasets = autocomplete_Datasets(inputDatasets)
 requestNames = []
 for x in inputDatasets:
@@ -36,26 +36,28 @@ from CRABClient.UserUtilities import config, getUsernameFromSiteDB
 
 
 config = config()
-config.General.workArea = 'DATA_JetHT2017'
+config.General.workArea = 'DATA_JetHT2017_unprefireable'
 config.General.transferOutputs = True
 config.General.transferLogs = True
         
 config.JobType.pluginName = 'Analysis'
 #config.JobType.psetName = '/nfs/dust/cms/user/karavdia/CMSSW_9_4_3/src/UHH2/core/python/ntuplewriter_addPrefireInfo_woElectrons.py'
-config.JobType.psetName = '/nfs/dust/cms/user/karavdia/CMSSW_9_4_3/src/UHH2/core/python/ntuplewriter_addPrefireInfo_woElectrons_woXCONE_woHOTVR.py'
+#config.JobType.psetName = '/nfs/dust/cms/user/karavdia/CMSSW_9_4_3/src/UHH2/core/python/ntuplewriter_addPrefireInfo_woXCONE_woHOTVR.py'
+config.JobType.psetName = '/nfs/dust/cms/user/karavdia/CMSSW_9_4_3/src/UHH2/core/python/ntuplewriter_addPrefireInfo_woXCONE_woHOTVR.py'
 config.JobType.outputFiles = ["Ntuple.root"]
 config.JobType.inputFiles = ['/nfs/dust/cms/user/karavdia/CMSSW_9_4_2/src/UHH2/JECDatabase/SQLiteFiles/Summer16_03Feb2017_V9_MC.db']
 config.JobType.sendExternalFolder = True
+config.JobType.maxMemoryMB = 3000
 config.Data.useParent = True
 config.Data.inputDBS = 'global'
 #config.Data.splitting = 'FileBased'
 #config.Data.unitsPerJob = 1
 config.Data.splitting = 'EventAwareLumiBased'
-config.Data.unitsPerJob = 15000
+config.Data.unitsPerJob = 13000
 #NJOBS = 1
 #config.Data.totalUnits = config.Data.unitsPerJob * NJOBS #For test run 1 job only
 #config.Data.unitsPerJob = 5000
-config.Data.outLFNDirBase = '/store/user/%s/RunII_94X_v2/DATA_JetHT_woElectrons_woXCONE_woHOTVR/' % (getUsernameFromSiteDB())
+config.Data.outLFNDirBase = '/store/user/%s/RunII_94X_v2/DATA_JetHT_wL1EG_wL1Jet_unprefireable/' % (getUsernameFromSiteDB())
 config.Data.publication = False
 config.Data.lumiMask ='/afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/ReReco/Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON.txt'
 
