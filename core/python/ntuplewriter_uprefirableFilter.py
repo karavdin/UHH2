@@ -1165,6 +1165,13 @@ process.slimmedElectronsUSER = cms.EDProducer('PATElectronUserData',
                                               effAreas_file=cms.FileInPath(
                                                   'RecoEgamma/ElectronIdentification/data/Fall17/effAreaElectrons_cone03_pfNeuHadronsAndPhotons_92X.txt'),
                                               )
+
+process.electronMVAValueMapProducer.src = cms.InputTag("")
+process.heepIDVarValueMaps.candVetosAOD = cms.vstring([])
+process.heepIDVarValueMaps.candsAOD = cms.VInputTag()
+process.heepIDVarValueMaps.ebRecHitsAOD = cms.InputTag("")
+process.heepIDVarValueMaps.eeRecHitsAOD = cms.InputTag("")
+process.heepIDVarValueMaps.elesAOD = cms.InputTag("") 
 task.add(process.egmGsfElectronIDs)
 task.add(process.slimmedElectronsUSER)
 
@@ -1492,10 +1499,11 @@ process.MyNtuple = cms.EDFilter('NtupleWriter',
                                     "slimmedPatTrigger"),
 
                                 #For 2017 data, store prefiring Info
-                                doPrefireFilter=cms.bool(True),
-#                                doPrefireFilter=cms.bool(False),
+                                doL1seed=cms.bool(True),
+#                                doL1seed=cms.bool(False),
                                 l1GtSrc = cms.InputTag("gtStage2Digis"),
-
+                                l1EGSrc = cms.InputTag("caloStage2Digis:EGamma"),
+                                l1JetSrc = cms.InputTag("caloStage2Digis:Jet"),
                                 # *** gen stuff:
                                 doGenInfo=cms.bool(not useData),
                                 genparticle_source=cms.InputTag(
@@ -1538,8 +1546,10 @@ process.MyNtuple = cms.EDFilter('NtupleWriter',
                                     "packedPFCandidates"),
 
                                 # *** HOTVR & XCone stuff
-                                doHOTVR=cms.bool(True),
-                                doXCone=cms.bool(True),
+#                                doHOTVR=cms.bool(True),
+                                doHOTVR=cms.bool(False),
+#                                doXCone=cms.bool(True),
+                                doXCone=cms.bool(False),
                                 HOTVR_sources=cms.VInputTag(
                                     cms.InputTag("hotvrCHS"),
                                     cms.InputTag("hotvrPuppi")
@@ -1555,12 +1565,7 @@ process.MyNtuple = cms.EDFilter('NtupleWriter',
 
 #process.content = cms.EDAnalyzer("EventContentAnalyzer")
 
-#select so-called 'unprefirable' events, see https://github.com/nsmith-/PrefireAnalysis/#usage for details
-process.prefireVetoFilter = cms.EDFilter("TriggerRulePrefireVetoFilter",
-#    tcdsRecordLabel = cms.InputTag("tcdsDigis:tcdsRecord"),
-    l1AcceptRecordLabel = cms.InputTag("scalersRawToDigi"),
-)
-#
+
 
 # Note: we run in unscheduled mode, i.e. all modules are run as required;
 # just make sure that the electron IDs run before MyNtuple
@@ -1569,7 +1574,10 @@ process.p = cms.Path(
     process.MyNtuple
 )
 
-
+#select so-called 'unprefirable' events, see https://github.com/nsmith-/PrefireAnalysis/#usage for details
+process.prefireVetoFilter = cms.EDFilter("TriggerRulePrefireVetoFilter",
+    l1AcceptRecordLabel = cms.InputTag("scalersRawToDigi"),
+)
 task.add(process.prefireVetoFilter)
 
 process.p.associate(task)

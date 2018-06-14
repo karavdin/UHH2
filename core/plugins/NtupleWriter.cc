@@ -210,7 +210,7 @@ NtupleWriter::NtupleWriter(const edm::ParameterSet& iConfig): outfile(0), tr(0),
   bool doTopJets = iConfig.getParameter<bool>("doTopJets");
 
   doTrigger = iConfig.getParameter<bool>("doTrigger");
-  doPrefireFilter = iConfig.getParameter<bool>("doPrefireFilter");
+  doL1seed = iConfig.getParameter<bool>("doL1seed");
   //doTrigHTEmu = iConfig.getParameter<bool>("doTrigHTEmu");
 
   doHOTVR = iConfig.getParameter<bool>("doHOTVR");
@@ -558,7 +558,7 @@ NtupleWriter::NtupleWriter(const edm::ParameterSet& iConfig): outfile(0), tr(0),
     }
 
   }
-  if(doPrefireFilter){
+  if(doL1seed){
     l1GtToken_ = consumes<BXVector<GlobalAlgBlk>>(iConfig.getParameter<edm::InputTag>("l1GtSrc"));
     l1EGToken_ = consumes<BXVector<l1t::EGamma>>(iConfig.getParameter<edm::InputTag>("l1EGSrc"));
     l1JetToken_ = consumes<BXVector<l1t::Jet>>(iConfig.getParameter<edm::InputTag>("l1JetSrc"));
@@ -1313,7 +1313,7 @@ bool NtupleWriter::filter(edm::Event& iEvent, const edm::EventSetup& iSetup) {
 
    print_times(timer, "trigger");
 
-  if(doPrefireFilter){
+  if(doL1seed){
     auto & triggerResults = *event->get_triggerResults();   
     //muGT 
     edm::Handle<BXVector<GlobalAlgBlk>> l1GtHandle;

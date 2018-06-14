@@ -34,8 +34,8 @@ process = cms.Process("USER")
 task = cms.Task()
 
 process.load("FWCore.MessageService.MessageLogger_cfi")
-#process.MessageLogger.cerr.FwkReport.reportEvery = cms.untracked.int32(1000)
-process.MessageLogger.cerr.FwkReport.reportEvery = cms.untracked.int32(10)
+process.MessageLogger.cerr.FwkReport.reportEvery = cms.untracked.int32(1000)
+#process.MessageLogger.cerr.FwkReport.reportEvery = cms.untracked.int32(10)
 process.options = cms.untracked.PSet(
     wantSummary=cms.untracked.bool(False),
     # wantSummary=cms.untracked.bool(True),
@@ -1500,7 +1500,7 @@ process.MyNtuple = cms.EDFilter('NtupleWriter',
 
                                 #For 2017 data, store prefiring Info
 #                                doPrefireFilter=cms.bool(True),
-                                doPrefireFilter=cms.bool(False),
+                                doL1seed=cms.bool(False),
                                 l1GtSrc = cms.InputTag("gtStage2Digis"),
                                 l1EGSrc = cms.InputTag("caloStage2Digis:EGamma"),
                                 l1JetSrc = cms.InputTag("caloStage2Digis:Jet"),
@@ -1546,10 +1546,10 @@ process.MyNtuple = cms.EDFilter('NtupleWriter',
                                     "packedPFCandidates"),
 
                                 # *** HOTVR & XCone stuff
-#                                doHOTVR=cms.bool(True),
-                                doHOTVR=cms.bool(False),
-#                                doXCone=cms.bool(True),
-                                doXCone=cms.bool(False),
+                                doHOTVR=cms.bool(True),
+#                                doHOTVR=cms.bool(False),
+                                doXCone=cms.bool(True),
+#                                doXCone=cms.bool(False),
                                 HOTVR_sources=cms.VInputTag(
                                     cms.InputTag("hotvrCHS"),
                                     cms.InputTag("hotvrPuppi")

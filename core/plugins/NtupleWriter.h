@@ -68,7 +68,7 @@ class NtupleWriter : public edm::one::EDFilter<edm::one::WatchRuns> {
       bool doAllGenParticlesPythia8;
       bool doPV;
       bool doTrigger;
-      bool doPrefireFilter;
+      bool doL1seed;
       bool runOnMiniAOD;
       bool doRho;
       bool doTrigHTEmu;
