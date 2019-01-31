@@ -61,10 +61,8 @@ class GenXConeProducer : public edm::stream::EDProducer<> {
     ~GenXConeProducer();
 
     static void fillDescriptions(edm::ConfigurationDescriptions& descriptions);
-  // // This method copies the constituents from the fjConstituents method
-  // // to an output of CandidatePtr's. 
-  virtual std::vector<reco::CandidatePtr>
-  getConstituents(const std::vector<fastjet::PseudoJet>&fjConstituents);
+  // // This method copies the constituents from the fjConstituents method to an output of CandidatePtr's. 
+  virtual std::vector<reco::CandidatePtr> getConstituents(const std::vector<fastjet::PseudoJet>&fjConstituents);
 
   private:
     virtual void beginStream(edm::StreamID) override;
