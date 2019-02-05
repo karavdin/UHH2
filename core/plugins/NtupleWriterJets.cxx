@@ -76,6 +76,7 @@ NtupleWriterJets::NtupleWriterJets(Config & cfg, bool set_jets_member, const std
 NtupleWriterJets::~NtupleWriterJets(){}
 
 void NtupleWriterJets::process(const edm::Event & event, uhh2::Event & uevent,  const edm::EventSetup& iSetup){
+  cout<<" ++ DEBUG NtupleWriterJets::process ++"<<endl;
     edm::Handle< std::vector<pat::Jet> > jet_handle;
     event.getByToken(src_token, jet_handle);
     const std::vector<pat::Jet> & pat_jets = *jet_handle;
@@ -137,10 +138,13 @@ void NtupleWriterJets::process(const edm::Event & event, uhh2::Event & uevent,  
             const auto& key = daughter_p.key();
 
             if(std::find(lepton_keys.begin(), lepton_keys.end(), key) == lepton_keys.end()) continue;
-
+	    cout<<"For key #"<<key<<" pt = "<<daughter_p->p4().pt()<<endl;
             jet.add_lepton_key(key);
           }
         }
+	cout<<"--- NtupleWriterJets::process: "<<" lepton keys in jet = "<<jet.lepton_keys().size()<<" total lepton_keys.size() = "<<lepton_keys.size()
+	    <<" total jet.key.size = "<<pat_jet.daughterPtrVector().size()
+	    <<" jet.pt = "<<jet.pt()<<" jet.eta = "<<jet.eta()<<" JEC = "<<jet.JEC_factor_raw()<<" JEC_L1 = "<<jet.JEC_L1factor_raw()<<endl;
         /*-------------------*/
     }
     uevent.set(handle, move(jets));
@@ -412,7 +416,7 @@ NtupleWriterTopJets::~NtupleWriterTopJets(){}
 
 
 void NtupleWriterTopJets::process(const edm::Event & event, uhh2::Event & uevent, const edm::EventSetup& iSetup){
-
+  cout<<" *** DEBUG NtupleWriterTopJets::process ***"<<endl;
     bool checkjettype =0;
     bool checkjettypegroomed =0;
 
@@ -493,6 +497,7 @@ void NtupleWriterTopJets::process(const edm::Event & event, uhh2::Event & uevent
           for(const auto& sc : muo.source_candidates()){
 
             lepton_keys.push_back(sc.key);
+	    //	    cout<<"muon key = "<<sc.key<<endl;
           }
         }
       }
@@ -505,10 +510,12 @@ void NtupleWriterTopJets::process(const edm::Event & event, uhh2::Event & uevent
           for(const auto& sc : ele.source_candidates()){
 
             lepton_keys.push_back(sc.key);
+	    //	    cout<<"electron key = "<<sc.key<<endl;
           }
         }
       }
     }
+    //    cout<<"NtupleWriterTopJets::process: lepton_keys.size() = "<<lepton_keys.size()<<endl;
     /*-------------------*/
 
     for (unsigned int i = 0; i < pat_topjets.size(); i++) {
@@ -557,18 +564,22 @@ void NtupleWriterTopJets::process(const edm::Event & event, uhh2::Event & uevent
         /*--- lepton keys ---*/
         if(save_lepton_keys_){
 
-          const auto& jet_daughter_ptrs = pat_topjet.daughterPtrVector();
+	  const auto& jet_daughter_ptrs = pat_topjet.daughterPtrVector();
+	  //          const auto& jet_daughter_ptrs = pat_topjet.getPFConstituents();//TEST lepton-key
           for(const auto & daughter_p : jet_daughter_ptrs){
 
             if(!daughter_p.isAvailable()) continue;
 
             const auto& key = daughter_p.key();
-
+	    //	    cout<<"Jet key = "<<key<<endl;
             if(std::find(lepton_keys.begin(), lepton_keys.end(), key) == lepton_keys.end()) continue;
-
+	    cout<<"TopJet: For key #"<<key<<" pt = "<<daughter_p->p4().pt()<<endl;
             topjet.add_lepton_key(key);
           }
         }
+	cout<<"Size of lepton_keys for TopJet = "<< topjet.lepton_keys().size()<<" total lepton key in event = "<<lepton_keys.size()
+	    <<" total topjet.key.size = "<<pat_topjet.daughterPtrVector().size()
+	    <<" topjet.pt = "<<topjet.pt()<<" topjet.eta = "<<topjet.eta()<<" JEC = "<<topjet.JEC_factor_raw()<<" JEC_L1 = "<<topjet.JEC_L1factor_raw()<<endl;
         /*-------------------*/
 
         /*--- Njettiness/Qjets/ECFs ------*/

@@ -27,7 +27,7 @@ void NtupleWriterElectrons::process(const edm::Event & event, uhh2::Event & ueve
     event.getByToken(src_token, ele_handle);
 
     edm::Handle<std::vector<reco::Vertex>> pv_handle;
-   event.getByToken(pv_token, pv_handle);
+    event.getByToken(pv_token, pv_handle);
    if(pv_handle->empty()){
        edm::LogWarning("NtupleWriterElectrons") << "No PVs found, not writing electrons!";
        return;

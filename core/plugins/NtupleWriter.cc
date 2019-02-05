@@ -662,7 +662,7 @@ namespace {
 // ------------ method called for each event  ------------
 bool NtupleWriter::filter(edm::Event& iEvent, const edm::EventSetup& iSetup) {
 
-
+  cout<<"==== NEW EVENT ==="<<endl;
 
    edm::CPUTimer timer;
    timer.start();
