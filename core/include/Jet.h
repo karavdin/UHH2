@@ -39,10 +39,9 @@ class Jet : public FlavorParticle {
     m_btag_BoostedDoubleSecondaryVertexAK8 = 0;
     m_btag_BoostedDoubleSecondaryVertexCA15 = 0;
     m_JEC_factor_raw = 0;
-    m_JEC_L1factor_raw = 0;
+    m_JEC_L1factor_raw = 0; 
     m_genjet_index = -1; // not default of 0, as 0 is a valid index
     m_pileupID = -2;
-
     m_lepton_keys.clear();
   }
 
