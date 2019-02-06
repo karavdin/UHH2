@@ -1325,7 +1325,8 @@ def generate_process(year, useData=True, isDebug=False, fatjet_ptmin=150.):
                                     doPhotons=cms.bool(False),
                                     #photon_sources = cms.vstring("selectedPatPhotons"),
 
-                                    doJets=cms.bool(True),
+                                    #doJets=cms.bool(True),
+                                    doJets=cms.bool(False), #TEST lepton key
                                     #jet_sources = cms.vstring("patJetsAk4PFCHS", "patJetsAk8PFCHS", "patJetsCa15CHSJets", "patJetsCa8CHSJets", "patJetsCa15PuppiJets", "patJetsCa8PuppiJets"),
                                     jet_sources=cms.vstring(
                                         # "slimmedJets", "slimmedJetsPuppi", ak8puppi_patname, ak8chs_patname),
@@ -1400,32 +1401,32 @@ def generate_process(year, useData=True, isDebug=False, fatjet_ptmin=150.):
                                             # ecf_beta1_source=cms.string(""),
                                             # ecf_beta2_source=cms.string("")
                                         ),
-                                        cms.PSet(
-                                            topjet_source=cms.string(
-                                                "packedPatJetsAk8CHSJets"),  # store ungroomed vars
-                                            subjet_source=cms.string("SoftDropCHS"),
-                                            do_subjet_taginfo=cms.bool(True),
-                                            higgstag_source=cms.string(
-                                                "patJetsAk8CHSJets"),
-                                            higgstag_name=cms.string(
-                                                "pfBoostedDoubleSecondaryVertexAK8BJetTags"),
-                                            higgstaginfo_source=cms.string(
-                                                "pfBoostedDoubleSVTagInfos"),
-                                            njettiness_source=cms.string(
-                                                "NjettinessAk8CHS"),
-                                            substructure_variables_source=cms.string(
-                                                "ak8CHSJets"),
-                                            njettiness_groomed_source=cms.string(
-                                                "NjettinessAk8SoftDropCHS"),
-                                            substructure_groomed_variables_source=cms.string(
-                                                "ak8CHSJetsSoftDropforsub"),
-                                            softdropmass_source=cms.string(
-                                                "patJetsAk8CHSJetsSoftDropPacked"),
-                                            ecf_beta1_source=cms.string(
-                                                "ECFNbeta1Ak8SoftDropCHS"),
-                                            ecf_beta2_source=cms.string(
-                                                "ECFNbeta2Ak8SoftDropCHS")
-                                        ),
+                                        # cms.PSet(
+                                        #     topjet_source=cms.string(
+                                        #         "packedPatJetsAk8CHSJets"),  # store ungroomed vars
+                                        #     subjet_source=cms.string("SoftDropCHS"),
+                                        #     do_subjet_taginfo=cms.bool(True),
+                                        #     higgstag_source=cms.string(
+                                        #         "patJetsAk8CHSJets"),
+                                        #     higgstag_name=cms.string(
+                                        #         "pfBoostedDoubleSecondaryVertexAK8BJetTags"),
+                                        #     higgstaginfo_source=cms.string(
+                                        #         "pfBoostedDoubleSVTagInfos"),
+                                        #     njettiness_source=cms.string(
+                                        #         "NjettinessAk8CHS"),
+                                        #     substructure_variables_source=cms.string(
+                                        #         "ak8CHSJets"),
+                                        #     njettiness_groomed_source=cms.string(
+                                        #         "NjettinessAk8SoftDropCHS"),
+                                        #     substructure_groomed_variables_source=cms.string(
+                                        #         "ak8CHSJetsSoftDropforsub"),
+                                        #     softdropmass_source=cms.string(
+                                        #         "patJetsAk8CHSJetsSoftDropPacked"),
+                                        #     ecf_beta1_source=cms.string(
+                                        #         "ECFNbeta1Ak8SoftDropCHS"),
+                                        #     ecf_beta2_source=cms.string(
+                                        #         "ECFNbeta2Ak8SoftDropCHS")
+                                        # ),
                                         # # cms.PSet(
                                         # #     # The fat jets that HepTopTag produces are the Top jet candidates,
                                         # #     # i.e. the sum of its subjets. Therefore they will NOT have
