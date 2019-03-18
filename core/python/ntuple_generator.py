@@ -55,7 +55,7 @@ def generate_process(year, useData=True, isDebug=False, fatjet_ptmin=120.):
         If the year argument is not one of the allowable options
     """
     year = str(year)  # sanitise string
-    acceptable_years = ["2016v2", "2016v3", "2017v1", "2017v2", "2018"]
+    acceptable_years = ["2016v2", "2016v3", "2017v1", "2017v2","2017v3","2017v4","2017v5", "2018", "2018v5", "2016v5"]
     if year not in acceptable_years:
         raise ValueError("year argument in generate_process() should be one of: %s. You provided: %s" % (acceptable_years, year))
 
@@ -81,6 +81,16 @@ def generate_process(year, useData=True, isDebug=False, fatjet_ptmin=120.):
         process = cms.Process("USER", eras.Run2_2016, eras.run2_miniAOD_80XLegacy) 
     elif year == "2016v2":
         process = cms.Process("USER", eras.Run2_2016)
+    elif year == "2018v5":
+        process = cms.Process("USER", eras.Run2_2018)
+    elif year == "2017v3":
+        process = cms.Process("USER", eras.Run2_2017, eras.run2_miniAOD_94XFall17)
+    elif year == "2017v4":
+        process = cms.Process("USER", eras.Run2_2017, eras.run2_miniAOD_94XFall17)
+    elif year == "2017v5":
+        process = cms.Process("USER", eras.Run2_2017, eras.run2_miniAOD_94XFall17)
+    elif year == "2016v5":
+        process = cms.Process("USER", eras.Run2_2016, eras.run2_miniAOD_80XLegacy)
     else:
         raise RuntimeError("Cannot setup process for this year, may need to add a new entry.")
 
@@ -282,10 +292,31 @@ def generate_process(year, useData=True, isDebug=False, fatjet_ptmin=120.):
             "data": "94X_dataRun2_v11",
             "mc": "94X_mc2017_realistic_v17"
         },
+        "2017v3": { #for Ultra-legacy checks, 10_5_ref1, Ref, see https://docs.google.com/spreadsheets/d/1k1oXZQw56uJI2Sd6oWcdu8JsALsDdGfVL13ybcZ5VFo/edit#gid=0
+            "data": "103X_mc2017_realistic_v2",
+            "mc": "103X_mc2017_realistic_v2"
+        },
+        "2017v4": { #for Ultra-legacy checks, 10_5_ref1, HCAL, see https://docs.google.com/spreadsheets/d/1k1oXZQw56uJI2Sd6oWcdu8JsALsDdGfVL13ybcZ5VFo/edit#gid=0
+            "data": "105X_mc2017_realistic_Hcal_v1",
+            "mc": "105X_mc2017_realistic_Hcal_v1"
+        },
+        "2017v5": { #for Ultra-legacy checks, 10_5_ref2, Tracking, see https://docs.google.com/spreadsheets/d/1k1oXZQw56uJI2Sd6oWcdu8JsALsDdGfVL13ybcZ5VFo/edit#gid=0
+            "data": "105X_mc2017_realistic_v4",
+            "mc": "105X_mc2017_realistic_v4"
+        },
         "2018": {
             "data": "102X_dataRun2_Prompt_v6",
             "mc": "102X_upgrade2018_realistic_v15",
         },
+        "2018v5": { #for Ultra-legacy checks, 10_5_ref2, Tracking, see https://docs.google.com/spreadsheets/d/1k1oXZQw56uJI2Sd6oWcdu8JsALsDdGfVL13ybcZ5VFo/edit#gid=0
+            "data": "105X_upgrade2018_realistic_v2",
+            "mc": "105X_upgrade2018_realistic_v2",
+        },
+        "2016v5": { #for Ultra-legacy checks, 10_5_ref2, Tracking, see https://docs.google.com/spreadsheets/d/1k1oXZQw56uJI2Sd6oWcdu8JsALsDdGfVL13ybcZ5VFo/edit#gid=0
+            "data": "105X_mcRun2_asymptotic_v1",
+            "mc": "105X_mcRun2_asymptotic_v1",
+        },
+
     }
     if set(global_tags.keys()) != set(acceptable_years):
         raise KeyError("Mismatch between acceptable_years and global_tags")
@@ -1797,9 +1828,14 @@ def generate_process(year, useData=True, isDebug=False, fatjet_ptmin=120.):
     iso_input_era_dict = {
         "2016v2": ele_iso_16,
         "2016v3": ele_iso_16,
+        "2016v5": ele_iso_16,
         "2017v1": ele_iso_17,
         "2017v2": ele_iso_17,
+        "2017v3": ele_iso_17,
+        "2017v4": ele_iso_17,
+        "2017v5": ele_iso_17,
         "2018": ele_iso_17,
+        "2018v5": ele_iso_17,
     }
 
     # slimmedElectronsUSER ( = slimmedElectrons + USER variables)
@@ -1922,8 +1958,12 @@ def generate_process(year, useData=True, isDebug=False, fatjet_ptmin=120.):
     prefire_era_dict = {
         '2016v2': '2016BtoH',
         '2016v3': '2016BtoH',
+        '2016v5': '2016BtoH',
         '2017v1': '2017BtoF',
         '2017v2': '2017BtoF',
+        '2017v3': '2017BtoF',
+        '2017v4': '2017BtoF',
+        '2017v5': '2017BtoF',
     }
     prefire_era = None if useData else prefire_era_dict.get(year, None)
     do_prefire = prefire_era is not None
